@@ -168,7 +168,8 @@ async def entrypoint(ctx: JobContext):
         chat_ctx=chat_context,
     )
 
-    chat = rtc.ChatManager(ctx.room)
+#    chat = rtc.ChatManager(ctx.room)
+    chat = assistant.start(ctx.room)
 
     async def _answer(text: str, use_image: bool = False):
         """
